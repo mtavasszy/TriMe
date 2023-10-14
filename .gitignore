@@ -32,3 +32,9 @@
 *.app
 TriME/x64/
 TriME/.vs/
+
+# intellij stuff
+.idea/
+cmake-build-*
+
+build/
