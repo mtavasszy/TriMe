@@ -1,8 +1,12 @@
 # TriMe
 
 
-## Installation
+## Building
 
+Make sure the git submodules are up to date with:
+```
+git submodule update --init --recursive
+```
 
 ### CMake
 

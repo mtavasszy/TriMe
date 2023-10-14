@@ -28,3 +28,23 @@ target_link_libraries(TriMe
         GLEW::GLEW
         GL
         )
+
+##### imgui example #####
+
+set(IMGUI_DIR ${CMAKE_CURRENT_LIST_DIR}/External/imgui)
+
+add_executable(imgui-example ${IMGUI_DIR}/examples/example_glfw_opengl3/main.cpp
+        ${IMGUI_DIR}/imgui.cpp
+        ${IMGUI_DIR}/imgui_demo.cpp
+        ${IMGUI_DIR}/imgui_draw.cpp
+        ${IMGUI_DIR}/imgui_tables.cpp
+        ${IMGUI_DIR}/imgui_widgets.cpp
+        ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
+        ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp)
+
+target_include_directories(imgui-example PRIVATE  ${IMGUI_DIR} ${IMGUI_DIR}/backends)
+
+target_link_libraries(imgui-example
+        glfw
+        GL
+        )
